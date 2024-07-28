@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify || login</title>
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+    <div id="outer">
+        <form id="form">
+            <h2 id="logo">Spotify</h2>
+            <div class="input">
+                <label>Email</label>
+                <input type="text" placeholder="Email"  class="email" id="ee" required/>
+            </div>
+            <div class="input">
+                <label>Password</label>
+                <input type="password" placeholder="Password" minlength="8" class="pass" id="pp" required/>
+            </div>
+            <span><a href="./Forget_pass.html" id="fp">Forget password?</a></span>
+            <div id="login-btn">
+                <input type="button" value="Login" onclick="login()"/>
+            </div>
+            <hr>
+            <div id="final">
+                <span>Don't have an account?<a href="./signup/signup.html">Sign up</a></span>
+            </div>
+        </form>
+        
+    </div>
+</body>
+<script>
+    function login(e){
+        var email=document.getElementById("ee").value;
+        var pass=document.getElementById("pp").value;
+
+        if(email == "admin123@gmail.com" && pass == "admin123"){
+            alert("Successfull");
+            window.location.href="./interface.html";
+        }
+        else{
+            alert("Invalid email or password")
+        }
+    }     
+</script>
+
+</html>
+
+

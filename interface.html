@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPOTSTAR</title>
+    <style>
+        body {
+            margin: 0px;
+            background-color: #353839;
+        }
+
+        :root {
+            --limegreen: limegreen;
+            /* for text */
+            --upperbg: #272727;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--upperbg);
+            width: 100%;
+        }
+
+        #logo h2 {
+            font-size: 30px;
+            margin: 16px;
+            color: var(--limegreen);
+        }
+
+        /* 
+#signup,#login{
+    padding: 10px 25px;
+    font-size: 17px;
+    font-weight: 700;
+    margin-right: 30px;
+    border-radius: 10px 25px;
+    border: none;
+    color: var(--limegreen);
+}
+#signup:hover,#login:hover{
+    background-color: var(--limegreen);
+    color: whitesmoke;
+    transform:scaleX(130%);
+}
+#signup:hover,#login:hover{
+    transition: all 1s 0.2s;
+} */
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        #row {
+            display: flex;
+            flex-direction: row;
+            margin-top: 100px;
+        }
+
+        #col1,
+        #col2 {
+            height: 250px;
+            width: 250px;
+            background-image: url(./images/Movies.jpg);
+            background-size: cover;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        #col2 {
+            background-image: url(./images/Headphone.jpg);
+        }
+
+        #col1:hover,
+        #col2:hover {
+            transform: scale(1.1);
+        }
+
+        @media screen and (max-width:500px) {
+
+            #col1,
+            #col2 {
+                height: 130px;
+                width: 130px;
+            }
+        }
+        @media screen and (max-width:900px) {
+
+            #col1,
+            #col2 {
+                height: 230px;
+                width: 230px;
+            }
+        }
+
+        #arrow {
+            height: 300px;
+            width: 330px;
+            display: flex;
+            justify-content: center;
+        }
+
+        @media screen and (max-width:500px) {
+            #arrow {
+                height: 130px;
+                width: 130px;
+            }
+        }
+        @media screen and (max-width:900px) {
+            #arrow {
+                height: 230px;
+                width: 230px;
+            }
+        }
+
+        .h2 {
+            font-size: 50px;
+            padding-left: 50px;
+            color: var(--limegreen);
+        }
+        @media screen and (max-width:500px) {
+            .h2 {
+                font-size: 30px;
+                padding-left: 30px;
+            }
+        }
+        @media screen and (max-width:900px) {
+            .h2 {
+                font-size: 40px;
+                padding-left: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <div class="navbar">
+            <div id="logo">
+                <h2>SpotStar</h2>
+            </div>
+            <!-- <div>
+               <a href="./signup/signup.html" target="blank" > <button id="signup">Signup</button></a>
+               <a href="./login/login.html" target="blank"> <button id="login">Login</button></a>
+            </div> -->
+        </div>
+        <div class="content">
+            <div id="row">
+                <div>
+                    <a href="./Movies.html" target="_blank">
+                        <div id="col1">
+                        </div>
+                    </a>
+
+                    <h2 class="h2">Movies</h2>
+                </div>
+
+                <div>
+                    <img src="./images/BothSide.svg" id="arrow" />
+                </div>
+
+                <div>
+                    <a href="./Music.html" target="_blank">
+                        <div id="col2">
+                        </div>
+                    </a>
+
+                    <h2 class="h2">Music</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

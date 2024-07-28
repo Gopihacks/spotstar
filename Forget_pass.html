@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotstar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --limegreen: limegreen;
+            --upperbg: #272727;
+            --entirebg: #353839;
+        }
+
+        body {
+            background-color: var(--entirebg);
+        }
+
+        .outer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+        }
+
+        .common,
+        #form1 {
+            background-color: var(--upperbg);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 20px 120px;
+            transition: 0.5s;
+        }
+
+        .common:hover,
+        #form1:hover {
+            transform: scale(1.2);
+            box-shadow: -20px -20px lightgreen;
+        }
+
+        #img {
+            font-size: 50px;
+            color: var(--limegreen);
+            padding-bottom: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .fp {
+            color: var(--limegreen);
+            font-style: italic;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .para {
+            text-align: center;
+            color: gray;
+            font-size: 16px;
+            font-weight: 600;
+            padding-bottom: 20px;
+        }
+
+        .input {
+            display: flex;
+            justify-content: center;
+        }
+
+        .input input {
+            margin-left: 8px;
+            padding: 8px;
+            border-radius: 10px;
+            width: 75%;
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        .input input::placeholder,
+        .input1 input::placeholder {
+            color: var(--limegreen);
+            font-size: 14px;
+            padding-left: 10px;
+        }
+
+        .submit {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+
+        .submit input,
+        .submit1 input {
+            padding: 12px;
+            border-radius: 30px;
+            background-color: var(--limegreen);
+            color: white;
+            width: 50%;
+            margin-left: 8px;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit input:hover,
+        .submit1 input:hover {
+            transform: scale(1.1)
+        }
+
+        .login {
+            display: flex;
+            justify-content: center;
+        }
+
+        .login a {
+            text-decoration: none;
+            color: gray;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .outer1 {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+        }
+
+        #form1 {
+            padding: 25px;
+        }
+
+        .lab {
+            color: var(--limegreen);
+            font-size: 20px;
+            margin: 20px;
+        }
+
+        .input1 {
+            flex-direction: row;
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+
+        .input1 input {
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .submit1 {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+
+        .submit1 input {
+            width: 75%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <div class="outer" id="1">
+            <div id="form">
+                <form>
+                    <div class="common">
+                        <div id="img"><i class="fa-solid fa-lock"></i></div>
+                        <div class="fp">
+                            <h2>Forgot Password</h2>
+                        </div>
+                        <div class="para">
+                            <p>Enter your email and we'll send you a link <br>to reset your password</p>
+                        </div>
+                        <div class="input"><input type="email" placeholder="Enter your email" id="email" required />
+                        </div>
+                        <div class="submit"><input type="submit" value="Submit" onclick="sub()" /></div>
+                        <div class="login"><a href="./index.html">Back to Login</a></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="outer1" id="2">
+            <div id="form1">
+                <div id="img"><i class="fa-solid fa-key"></i></div>
+                <form>
+                    <div class="input1">
+                        <label class="lab">New Password</label>
+                        <input type="password" placeholder="new Password" id="newp" required />
+                    </div>
+                    <div class="input1">
+                        <label class="lab">Confirm password</label>
+                        <input type="password" placeholder="confirm Password" id="confirm" required />
+                    </div>
+                    <div class="submit1"><input type="submit" value="Change Password" onclick="change()" /></div>
+                </form>
+                <div class="login"><a href="./index.html">Back to login</a></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+
+<script>
+    function sub(e) {
+        event.preventDefault();
+        var email = document.getElementById("email").value;
+        var one = document.getElementById("1");
+        var two = document.getElementById("2");
+        if (email == "admin@gmail.com") {
+            one.style.display = 'none';
+            two.style.display = 'flex';
+        }
+        else {
+            alert("Email does't match !!!");
+        }
+    }
+
+    function change(e) {
+        event.preventDefault();
+        var newp = document.getElementById("newp").value;
+        var confirm = document.getElementById("confirm").value;
+        if (newp == confirm) {
+            alert("Password changed successfully");
+            window.location.href  = "./index.html";
+        }
+        else {
+            alert("Password does't match");
+        }
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --limegreen:limegreen;/* for text */
+    --upperbg:#272727;
+    --entirebg:#353839;
+}
+body{
+    background-color: var(--entirebg);
+}
+
+#outer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#form{
+    background-color: var(--upperbg);
+    width:fit-content;
+    padding: 35px;
+    border-radius: 20px 150px;
+    transition: 0.5s;
+}
+#form:hover{
+    transform: scale(1.1);
+    box-shadow: -20px -20px lightgreen;
+}
+#logo{
+    color: var(--limegreen);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.input{
+    padding-bottom: 15px;
+}
+
+.input label{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--limegreen);
+    padding-right: 35px;
+}
+.input1 label{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--limegreen);
+    padding-right: 10px;
+}
+.input input,.input1 input{
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+}
+.input input::placeholder,.input1 input::placeholder{
+    color: var(--limegreen);
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+#submit{
+    display: flex;
+    justify-content: center;
+}
+
+#submit input{
+    background-color: var(--limegreen);
+    color: whitesmoke;
+    padding: 15px 60px;
+    margin: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#submit input:hover{
+    transform: scale(1.1)
+}
+
+.goofb{
+    margin: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.5s;
+}
+.goofb:hover{
+    border: 2px solid var(--limegreen);
+    transform: scale(1.1);
+}
+.goofb a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.goofb a span i{
+    color: var(--limegreen);
+    padding-right: 10px;
+}
+
+#final{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 0px 0px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+#final a{
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--limegreen);
+    padding-left: 6px;
+}
